@@ -138,3 +138,4 @@ AWS Directory Service proposes different options to use Microsoft AD with AWS se
 - AD Connector: A proxy service to connect to a remote Microsoft AD on-premises
 - Managed Microsoft AD: A Microsoft AD environment managed by AWS
 
+
