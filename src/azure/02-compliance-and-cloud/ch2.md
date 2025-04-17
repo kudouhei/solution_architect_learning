@@ -73,6 +73,8 @@ Using management groups, you can logically group subscriptions.
 
 ![Management Groups](./images/06.png)
 
+![Management Groups](./images/a14.png)
+
 ### Azure Policy
 Azure Policy constantly runs evaluations or scans on your resources to make sure they are compliant. Azure Policy can stop new resources from breaking the compliance requirements. Azure Policy cannot delete resources that are noncompliant.
 
@@ -142,6 +144,20 @@ There are four Azure fundamental roles that you should be aware of:
 
 ![RBAC](./images/09.png)
 
+RBAC is a general term used for restricting access to users, based on a role. It works on the `Just Enough Access (JEA)` concept, where a specific user/group will be provided the minimum access required to perform their specific job on a specific resource. Custom roles can only be created and updated by a user who has the following role assigned: `Microsoft.Authorization/roleDefinitions/write` permissions.
+
+
+**A role definition consists of three main elements:**
+- **Actions**: These are the operations that can be performed on Azure resources, such as read, write, delete, and manage access. Actions are represented in string format, which contains the resource provider and the resource type, like Microsoft.Storage/storageAccounts/write.
+- **NotActions**: These are the operations that are explicitly denied, even if they are included in the Actions section. This is useful for creating custom roles with a limited set of permissions.
+- **AssignableScopes**: This defines the scope within which the role definition can be assigned to users, groups, or applications. The scope can be a subscription, resource group, or a specific resource.
+
+
+#### In summary, RBAC consists of three main sections:
+- **Security principal**: Selects who is going to have access
+- **Role**: Selects what type of access is going to be assigned to the security principal
+- **Scope**: Selects the resource that the user and the role will be applied to
+
 #### Custom RBAC Roles
 You can create custom RBAC roles to meet your specific needs.
 
@@ -168,6 +184,13 @@ If you need to clone a built-in role and modify the JSON with the permissions in
 Get-AzRoleDefinition -Name "Owner" | ConvertTo-Json | Out-File "Owner.json"
 ```
 
+**Example of Role Assignment**
+
+Suppose you want to grant read-only access to a user named John for a specific resource group in Azure. You can create a role assignment by associating the Reader role definition with the user John and setting the scope to the desired resource group. This way, John will have read-only access to all resources within that resource group.
+
+
+
+![RBAC](./images/a17.png)
 
 ### Resource Locks
 In Azure, administrators can use locks to lock a subscription, resource group, or resource from getting deleted or modified. The lock will override any permission that is granted to you via RBAC.
@@ -185,5 +208,18 @@ Resource tags can be used to logically organize the resources in your environmen
 
 ![Resource Tags](./images/10.png)
 
+### Relationship Between Microsoft Entra and Subscriptions
+
+A Microsoft Entra tenant can have a 1:M (one to many) relationship with subscriptions (meaning it can be associated with multiple subscriptions), but a subscription can only have a 1:1 relationship with a tenant (meaning one subscription can only be associated with one tenant). 
+
+![Relationship Between Microsoft Entra and Subscriptions](./images/a15.png)
+
+![Relationship Between Microsoft Entra and Subscriptions](./images/a16.svg)
 
 
+#### Azure Policy versus RBAC
+
+Both Azure Policy and role-based access control (RBAC) contribute to controlling governance within Azure. While both create methods of controlling access, there is often confusion between the two. The differences between them are distinguished for clarity, as follows:
+
+- Azure Policy focuses on resource properties for existing resources and resources being deployed. Azure Policy is used for the enforcement of governance standards within the Azure platform.
+- RBAC focuses on user actions at different scopes. RBAC contributes to governance by enforcing permissions at the service principal layer.

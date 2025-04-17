@@ -58,6 +58,8 @@ Every tenant will have two properties that make it unique from other tenants cre
   - Bulk operations: let you download a CSV template where you add users you want to create, delete, or invite. Using bulk operation, we can easily work on these operations rather than doing one by one.
 - Groups
   - Groups types: security groups and Microsoft 365 groups
+    - Security groups: These groups serve the same function as traditional on-premises groups, which is to secure objects within a directory. In this case, it is to secure objects within Microsoft Entra.
+    - Microsoft 365 groups: These groups are used to provide a group of people access to a collection of shared resources that is not limited to Microsoft Entra ID but also includes shared mailboxes, calendars, SharePoint libraries, and other Microsoft 365-related services.
   - Assignment types: assigned, dynamic user, and dynamic device
 
 ### Azure AD Roles
@@ -87,3 +89,55 @@ Self-service password reset (SSPR) allows users to reset their passwords using a
 ### Multi tenant environments
 
 ![Multi tenant environments](./images/06.png)
+
+
+### Notes
+
+![Notes](./images/07.png)
+
+
+#### AUs have the following prerequisites:
+- A Microsoft Entra ID P1 license is required for each AU administrator
+- A Microsoft Entra ID Free license is required for AU members
+- A privileged role administrator or global administrator is required for configuration
+
+AUs (Administrative units) can be created via the Azure portal or PowerShell.
+
+**Create an administrative unit**
+
+- Use the **New-MgDirectoryAdministrativeUnit** command to create a new administrative unit.
+
+```powershell
+$params = @{
+    DisplayName = "Seattle District Technical Schools"
+    Description = "Seattle district technical schools administration"
+    Visibility = "HiddenMembership"
+}
+$adminUnitObj = New-MgDirectoryAdministrativeUnit -BodyParameter $params
+```
+
+### Microsoft Entra Join
+
+The following diagram illustrates a device-to-Microsoft Entra ID join connection, demonstrating how the connection is made from the device to Microsoft Entra ID. Entra ID can then form a hybrid connection to an on-premises Active Directory system, with synchronization occurring between the platforms through the Microsoft Entra Connect service.
+
+![Microsoft Entra Join](./images/08.png)
+
+**Scenarios**
+Microsoft Entra join can be used in various scenarios like:
+- You want to transition to cloud-based infrastructure using Microsoft Entra ID and MDM like Intune.
+- You can't use an on-premises domain join, for example, if you need to get mobile devices such as tablets and phones under control.
+- Your users primarily need to access Microsoft 365 or other software as a service (SaaS) apps integrated with Microsoft Entra ID.
+- You want to manage a group of users in Microsoft Entra ID instead of in Active Directory. This scenario can apply, for example, to seasonal workers, contractors, or students.
+- You want to provide joining capabilities to workers who work from home or are in remote branch offices with limited on-premises infrastructure.
+
+**Device Settings**
+- Users may join devices to Microsoft Entra
+- Users may register their devices with Entra ID
+- Require Multi-Factor Authentication to register or join devices with Microsoft Entra
+- Maximum number of devices per user
+- Manage Additional local administrators on all Microsoft Entra joined devices
+- Enable Microsoft Entra Local Administrator Password Solution (LAPS)
+- Restrict users from recovering the BitLocker key(s) for their owned devices
+  
+
+
