@@ -24,7 +24,13 @@ We can broadly classify the data that can be stored into three categories:
 ## Azure Storage Services
 Five services are part of Azure Storage.
 
+All these services can be consumed from a Standard general-purpose v2 (Standard GPv2) storage account, and some can be consumed individually as the Premium variations (such as Azure Files and Blob Storage), where more performance is required.
+
 ![Azure Storage Services](./images/11.png)
+
+The following figure illustrates the different storage services associated with a storage account. It illustrates the storage accounts split by the various performance type categories with the storage account types contained within them. On the right of the figure, you can see a brief list of use cases for each storage service type:
+
+![Azure Storage Services](./images/a1.png)
 
 **Azure Blob Storage**
 In some documentation, you will see that Azure Blob Storage is referred to as Azure Containers or Azure Container Storage.
@@ -73,6 +79,8 @@ Azure Storage replication will ensure that your data is copied and is protected 
 
 Before you start, the selection of replication strategy is a trade-off between the cost and durability.
 
+The Standard GPv2 storage account is a Standard performance tier account. It supports several services as part of its construct: blobs, queues, tables, and file shares. This is the storage account type recommended for most scenarios due to its versatility in storage services and is the default option. It also supports several storage redundancy options: locally redundant storage (LRS), geo-redundant storage (GRS), read-access geo-redundant storage (RA-GRS), zone-redundant storage (ZRS), geo-zone-redundant storage (GZRS), and read-access geo-zone-redundant storage (RA-GZRS).
+
 #### Locally Redundant Storage
 Locally redundant storage (LRS) offers the least durability compared to other options you have. Since the durability is less, LRS offers the lowest cost.
 
@@ -96,7 +104,7 @@ There are two downsides:
 #### Geo redundant Storage
 In geo redundant storage (GRS), your data is replicated to a secondary region. Ideally, the secondary region will be hundreds of miles away from the primary region. The secondary region is selected by Azure based on the regional pairs.
 
-Cost-wise, GRS is more expensive than ZRS and LRS; with the increased cost comes more data durability. GRS offers a durability of 99.9999999999999999 percent (16 nine) over a given year.
+Cost-wise, GRS is more expensive than ZRS and LRS; with the increased cost comes more data durability. GRS offers a durability of 99.99999999999 percent (16 nine) over a given year.
 
 GRS offers two variants:
 - **GRS** This method replicates the data to the secondary region; however, the data in the secondary is not readable. The data can be read only if a failover is initiated to the secondary region. The failover can be initiated by the customer manually or by Microsoft in the case of a regional outage.
@@ -299,6 +307,8 @@ You can use snapshots in the following scenarios:
 #### Azure File Sync
 Azure File Share is a cloud-based file share that enables you to access the file share from any computer anywhere in the world.
 
+The service offers versatility when it comes to connectivity, as it allows you to use any protocol that’s available on Windows Server to access your data locally, including Server Message Block (SMB), Network File System (NFS), and File Transfer Protocol over TLS (FTPS).
+
 In simple words, you can synchronize the files you have on-premises with Azure File Share.
 
 The following are the advantages of File Sync:
@@ -342,7 +352,9 @@ A file share that is part of a sync group is called a cloud endpoint. An Azure f
 Using Azure Storage Explorer, you can easily manage, upload, and download blobs, queues, tables, and files. Azure Storage Explorer can work with Azure Data Lake Storage and Azure managed disks. You can control the permissions, access, and tiers from the tool.
 
 **AzCopy**
-AzCopy is a next-generation command-line tool for copying data from or to Azure Blob and Azure Files.
+AzCopy is a next-generation command-line tool for copying data from or to Azure Blob and Azure Files. AzCopy is a utility that can be used for copying files to and from Azure Storage accounts through a command-line-based utility.
+
+The AzCopy commands are structured in the following format: `azcopy [command] [source] [destination] [flags]`.
 
 With AzCopy you can copy data in the following scenarios:
 - Copy data from a local machine to Azure Blobs or Azure Files
@@ -362,3 +374,31 @@ The following are some usage cases of the Import/Export service:
 ![Import/Export Service](./images/19.png)
 
 
+## Notes
+
+#### Difference between Storage Encryption on Azure and Infrastructure Encryption
+Azure provides the option to encrypt not only storage on Azure but also the infrastructure. It’s important to understand the differences between these, and it is always advised where possible to maintain the highest levels of security possible. Here, you will learn about encryption for the Azure platform and for storage:
+
+- **Storage encryption on Azure**: This refers to encryption services provided by Azure to protect data stored within its storage services, such as Azure Blob Storage, Azure Files, and Azure Disks. Azure provides several encryption options, including server-side encryption (SSE) using service-managed keys, customer-managed keys (CMK), or customer-provided keys. Azure Storage uses SSE, which is encryption on the host layer of services within Azure and is used to automatically encrypt data when it is persisted to the cloud.
+- **Infrastructure encryption**: Infrastructure encryption in Azure storage accounts is an enhanced security feature that offers customers an elevated level of data protection. When this feature is activated, data stored in a storage account undergoes two distinct encryption processes, one at the service level and another at the infrastructure level. This dual encryption approach employs two separate encryption algorithms and keys, ensuring that even in the event of a compromise of one encryption layer, the other layer continues to safeguard the data.
+
+#### Different Encryption Types on a Storage Account
+There are two types of encryption key management available for Azure Storage: Microsoft-managed keys (MMK) and customer-managed keys (CMK):
+- **MMK**: By default, data in a new storage account is encrypted with MMK.
+- **CMK**: Users who prefer to have more control over their encryption keys can opt for CMK.
+
+
+## Working with SAS Tokens
+
+SAS tokens are secure access tokens that provide delegated access to resources on your storage account. The storage service confirms the SAS token is valid in order to grant access.
+
+#### Types of SAS
+There are three types of SAS supported by Azure Storage:
+- **User-delegated SAS**: This is a SAS token that is secured by Entra ID credentials.
+- **Account SAS**: An account SAS is created and secured using a storage key. The permissions granted can span several services (blob, file, queue, and table), as well as accessing permissions for the chosen services.
+- **Service SAS**: A service SAS is identical to an account SAS except that it is limited to a single service. There are limitations to some read, write, and delete operations for a service SAS that the account SAS has higher privileges to allow.
+
+#### Forms of SAS
+SAS tokens can take two forms, as detailed here:
+- **Ad hoc SAS**: This SAS token is created as needed where permissions are chosen along with accessible services in alignment with the type of SAS used. The configuration is specified in the SAS URI. This is generally used for scenarios where quick access is required for a temporary period. SAS tokens cannot be managed after being issued. User-delegated SAS and account SAS can only be provisioned as an ad hoc SAS.
+- **Service SAS with stored access policy**: This form of SAS token is more secure and enhances the functionality upon that which an ad hoc SAS token delivers. Service SAS tokens can be managed after being issued and are manufactured to comply with policies configured in the stored access policy. SAS tokens can be modified and deleted using a stored access policy.

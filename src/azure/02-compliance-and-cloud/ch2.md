@@ -56,6 +56,9 @@ By default, only the **account administrator** will have access to the newly cre
 ### Azure Cost Management
 Azure Cost Management is the go tool for performing your billing administrative tasks and for monitoring costs.
 
+Azure Cost Management + Billing is a suite of tools designed to assist in the analysis, management, and cost optimization of Azure workloads.
+
+
 **Cost Saving Techniques**
 - Reservations: Reserved instances (RIs), or reservations, can be used by customers to save costs on selected services.
 - Azure Hybrid Benefit: You can bring your own Windows Server or SQL Server or Linux licenses to use on Azure Virtual Machine, Azure SQL Database, and Azure Managed Instances.
@@ -203,10 +206,24 @@ To create or delete locks, you need to be Owner or User Access Administrator. If
 
 ![Resource Locks](./images/11.png)
 
+**Permissions Required for Creating or Deleting Locks**
+
+- Built-In Azure Roles
+  - If your preference is to use a predefined Azure role, then either of the following will be suitable: **Owner** or **User Access Administrator**
+- Custom Azure Roles
+  - If you are using a custom role, then you need to include the following actions in the role definition:
+    - `Microsoft.Authorization/*`
+    - `Microsoft.Authorization/locks/*`
+
+
 ### Resource Tags
 Resource tags can be used to logically organize the resources in your environment. Each tag comprises a key-value pair, where you will be adding a name and a corresponding value.
 
 ![Resource Tags](./images/10.png)
+
+Tags in Azure are metadata labels that can be assigned to resources, resource groups, and subscriptions to help users organize, categorize, and manage their cloud resources more effectively. Tags are key-value pairs that provide additional information about the resources and can be used for various purposes, such as tracking ownership, managing cost allocation, and enforcing governance policies.
+
+
 
 ### Relationship Between Microsoft Entra and Subscriptions
 
