@@ -65,3 +65,16 @@
   | Logic App Contributor | You can manage logic app workflows, but you can't change access to them. |
   | Logic App Operator | You can read, enable, and disable logic app workflows, but you can't edit or update them. |
   | Contributor | You have full access to manage all resources, but you can't assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. |
+
+- Azure built-in roles
+  - https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles
+  
+  | Role | Description |
+  |------|-------------|
+  | Contributor | Grants full access to manage all resources, but does not allow you to assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries |
+  | Owner | Grants full access to manage all resources, including the ability to assign roles in Azure RBAC. |
+  | Role Based Access Control Administrator | Manage access to Azure resources by assigning roles using Azure RBAC. This role does not allow you to manage access using other ways, such as Azure Policy. |
+  | User Access Administrator | Lets you manage user access to Azure resources. |
+
+
+
