@@ -87,3 +87,24 @@
 - **Create a virtual machine with a static private IP address**
   - When you create a virtual machine (VM), it's automatically assigned a private IP address from a range that you specify. This IP address is based on the subnet in which the VM is deployed, and the VM keeps this address until the VM is deleted. Azure dynamically assigns the next available private IP address from the subnet you create a VM in. If you want to assign a specific IP address in this subnet for your VM, use a static IP address.
   - https://learn.microsoft.com/en-us/azure/virtual-network/ip-services/virtual-networks-static-private-ip?tabs=azureportal
+
+- **Create, change, or delete a network security group**
+  - https://learn.microsoft.com/en-us/azure/virtual-network/manage-network-security-group?tabs=network-security-group-portal
+
+- **Create, Change, or Delete Azure Virtual Network Peering**
+  - https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-manage-peering?tabs=peering-portal
+  - A peering is established between two virtual networks. Peerings by themselves aren't transitive. If you create peerings between:
+    - VirtualNetwork1 and VirtualNetwork2
+    - VirtualNetwork2 and VirtualNetwork3
+    1. There's no connectivity between VirtualNetwork1 and VirtualNetwork3 through VirtualNetwork2. If you want VirtualNetwork1 and VirtualNetwork3 to directly communicate, you have to create an explicit peering between VirtualNetwork1 and VirtualNetwork3, or go through an NVA in the Hub network.
+  - You can't resolve names in peered virtual networks using default Azure name resolution. To resolve names in other virtual networks, you must use Azure Private DNS or a custom DNS server.
+  - Resources in peered virtual networks in the same region can communicate with each other with the same latency as if they were within the same virtual network.
+  
+- **Create an Azure DNS zone and record using the Azure portal**
+  - https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
+
+- **Configure Azure Storage firewalls and virtual networks**
+  - Azure Storage provides a layered security model. This model enables you to control the level of access to your storage accounts that your applications and enterprise environments demand, based on the type and subset of networks or resources that you use.
+  - The Azure Storage firewall provides access control for the public endpoint of your storage account. You can also use the firewall to block all access through the public endpoint when you're using private endpoints. Your firewall configuration also enables trusted Azure platform services to access the storage account.
+  - You can grant access to Azure services that operate from within a virtual network by allowing traffic from the subnet that hosts the service instance. You can also enable a limited number of scenarios through the exceptions mechanism that this article describes. 
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
