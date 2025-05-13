@@ -36,3 +36,32 @@
   - To resolve the records of a private DNS zone from your virtual network, you must link the virtual network with the zone. Linked virtual networks have full access and can resolve all DNS records published in the private zone.
   - https://learn.microsoft.com/en-us/azure/dns/private-dns-overview
 
+- Back up a virtual machine in Azure
+  - You can protect your data by taking backups at regular intervals. Azure Backup creates recovery points that can be stored in geo-redundant recovery vaults. 
+  - https://learn.microsoft.com/en-us/azure/backup/quick-backup-vm-portal
+
+
+- Databases architecture design
+  - https://learn.microsoft.com/en-us/azure/architecture/databases/
+  
+- What is Azure Table storage?
+  - Azure Table storage is a service that stores non-relational structured data (also known as structured NoSQL data) in the cloud, providing a key/attribute store with a schemaless design.
+  - You can use Table storage to store flexible datasets like user data for web applications, address books, device information, or other types of metadata your service requires.
+  - https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview
+
+- What is Azure role-based access control (Azure RBAC)?
+  - Here are some examples of what you can do with Azure RBAC:
+    - Allow one user to manage virtual machines in a subscription and another user to manage virtual networks
+    - Allow a DBA group to manage SQL databases in a subscription
+    - Allow a user to manage all resources in a resource group, such as virtual machines, websites, and subnets
+    - Allow an application to access all resources in a resource group
+  - https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
+
+- Secure access and data for workflows in Azure Logic Apps
+  - https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal
+  
+  | Role | Description |
+  |------|-------------|
+  | Logic App Contributor | You can manage logic app workflows, but you can't change access to them. |
+  | Logic App Operator | You can read, enable, and disable logic app workflows, but you can't edit or update them. |
+  | Contributor | You have full access to manage all resources, but you can't assign roles in Azure RBAC, manage assignments in Azure Blueprints, or share image galleries. |
