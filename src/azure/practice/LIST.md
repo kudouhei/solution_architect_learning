@@ -78,6 +78,7 @@
 
 - **Create, change, or delete a network interface**
   - A network interface (NIC) enables an Azure virtual machine (VM) to communicate with internet, Azure, and on-premises resources.
+  - A VM you create in the Azure portal has one NIC with default settings. You can create NICs with custom settings instead, and add one or more NICs to a VM when or after you create it. You can also change settings for an existing NIC.
   - https://learn.microsoft.com/en-us/azure/virtual-network/virtual-network-network-interface?tabs=azure-portal
 
 - **Generate and export certificates for point-to-site using PowerShell**
@@ -99,6 +100,9 @@
     1. There's no connectivity between VirtualNetwork1 and VirtualNetwork3 through VirtualNetwork2. If you want VirtualNetwork1 and VirtualNetwork3 to directly communicate, you have to create an explicit peering between VirtualNetwork1 and VirtualNetwork3, or go through an NVA in the Hub network.
   - You can't resolve names in peered virtual networks using default Azure name resolution. To resolve names in other virtual networks, you must use Azure Private DNS or a custom DNS server.
   - Resources in peered virtual networks in the same region can communicate with each other with the same latency as if they were within the same virtual network.
+  - You can peer virtual networks in the same region, or different regions. Peering virtual networks in different regions is also referred to as Global Virtual Network Peering.
+  - You can't move a virtual network while it's part of a peering. To move a virtual network to a different resource group or subscription, first delete the peering, then move the virtual network, and finally recreate the peering.
+  - The virtual networks you peer must have nonoverlapping IP address spaces.
   
 - **Create an Azure DNS zone and record using the Azure portal**
   - https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
@@ -108,3 +112,45 @@
   - The Azure Storage firewall provides access control for the public endpoint of your storage account. You can also use the firewall to block all access through the public endpoint when you're using private endpoints. Your firewall configuration also enables trusted Azure platform services to access the storage account.
   - You can grant access to Azure services that operate from within a virtual network by allowing traffic from the subnet that hosts the service instance. You can also enable a limited number of scenarios through the exceptions mechanism that this article describes. 
   - https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
+
+- **Network security groups**
+  - 
+  - https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
+
+- **Azure Load Balancer SKUs**
+  - Azure Load Balancer has three stock-keeping units (SKUs) - Basic, Standard, and Gateway. Each SKU is catered towards a specific scenario and has differences in scale, features, and pricing.
+  - Limitations:
+    - A standalone virtual machine resource, availability set resource, or virtual machine scale set resource can reference one SKU, never both.
+  - https://learn.microsoft.com/en-us/azure/load-balancer/skus
+
+- **Import and export a DNS zone file using the Azure CLI**
+  - A DNS zone file is a text file containing information about every Domain Name System (DNS) record in the zone.
+  - Azure DNS supports importing and exporting zone files via the Azure CLI and the Azure portal.
+  - Before you import a DNS zone file into Azure DNS, you need to obtain a copy of the zone file. The source of this file depends on where the DNS zone is hosted.
+
+- **Standard load balancer diagnostics with metrics, alerts, and resource health**
+  - Azure Load Balancer exposes the following diagnostic capabilities:
+    - Multi-dimensional metrics and alerts: Provides multi-dimensional diagnostic capabilities through Azure Monitor for Azure Load Balancer configurations. You can monitor, manage, and troubleshoot your standard load balancer resources.
+    - Resource health: The Resource Health status of your load balancer is available in the Resource health page under Monitor.
+      - Azure Resource Health alerts can notify you in near real-time when the health state of your Load balancer resource changes. It's recommended that you set resource health alerts to notify you when your Load balancer resource is in a Degraded or Unavailable state.
+  - https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-diagnostics
+
+- **Create a Log Analytics workspace**
+  - A Log Analytics workspace is a data store into which you can collect any type of log data from all of your Azure and non-Azure resources and applications. We recommend that you send all log data to one Log Analytics workspace, unless you have specific business needs that require you to create multiple workspaces.
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/logs/quick-create-workspace?tabs=azure-portal
+
+
+- **What is Azure Application Gateway?** 
+  - Azure Application Gateway is a web traffic (OSI layer 7) load balancer that enables you to manage traffic to your web applications. Traditional load balancers operate at the transport layer (OSI layer 4 - TCP and UDP) and route traffic based on source IP address and port, to a destination IP address and port.
+  - https://learn.microsoft.com/en-us/azure/application-gateway/overview
+
+- **What is Azure Load Balancer?**
+  - Load balancing refers to efficiently distributing incoming network traffic across a group of backend virtual machines (VMs) or virtual machine scale sets (VMSS).
+  - Azure Load Balancer operates at layer 4 of the Open Systems Interconnection (OSI) model. It's the single point of contact for clients. 
+  - A public load balancer can provide both inbound and outbound connectivity for the VMs inside your virtual network. For inbound traffic scenarios, Azure Load Balancer can load balance internet traffic to your VMs. For outbound traffic scenarios, the service can translate the VMs' private IP addresses to public IP addresses for any outbound connections that originate from your VMs.
+  - An internal (or private) load balancer can provide inbound connectivity to your VMs in private network connectivity scenarios, such as accessing a load balancer frontend from an on-premises network in a hybrid scenario. Internal load balancers are used to load balance traffic inside a virtual network.
+
+- **Assign Azure roles using the Azure portal**
+  - Azure role-based access control (Azure RBAC) is the authorization system you use to manage access to Azure resources.
+  - Access control (IAM) is the page that you typically use to assign roles to grant access to Azure resources.
+  - https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
