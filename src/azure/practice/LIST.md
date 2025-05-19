@@ -154,3 +154,44 @@
   - Azure role-based access control (Azure RBAC) is the authorization system you use to manage access to Azure resources.
   - Access control (IAM) is the page that you typically use to assign roles to grant access to Azure resources.
   - https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
+
+- **Understand resource locking in Azure Blueprints**
+  - Locking Mode applies to the blueprint assignment and it has three options: Don't Lock, Read Only, or Do Not Delete. The locking mode is configured during artifact deployment during a blueprint assignment. A different locking mode can be set by updating the blueprint assignment. Locking modes, however, can't be changed outside of Azure Blueprints.
+  - https://learn.microsoft.com/en-us/azure/governance/blueprints/concepts/resource-locking
+
+- **What is Azure Web Application Firewall on Azure Application Gateway?**
+  - The Azure Web Application Firewall (WAF) on Azure Application Gateway actively safeguards your web applications against common exploits and vulnerabilities. As web applications become more frequent targets for malicious attacks, these attacks often exploit well-known vulnerabilities such as SQL injection and cross-site scripting.
+  - Application Gateway operates as an application delivery controller (ADC). It offers Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), termination, cookie-based session affinity, round-robin load distribution, content-based routing, ability to host multiple websites, and security enhancements.
+  - **WAF policy and rules**
+    - To enable a Web Application Firewall on Application Gateway, you must create a WAF policy. This policy is where all of the managed rules, custom rules, exclusions, and other customizations such as file upload limit exist.
+  - **Features**
+    - SQL injection protection.
+    - Cross-site scripting protection.
+    - Protection against other common web attacks, such as command injection, HTTP request smuggling, HTTP response splitting, and remote file inclusion.
+    - Protection against HTTP protocol violations.
+
+    
+- **Add your custom domain name to your tenant**
+  - After you add your custom domain name, you must return to your domain registrar and add the DNS information from your copied from the previous step. Creating this TXT or MX record for your domain verifies ownership of your domain name.
+  - Go back to your domain registrar and create a new TXT or MX record for your domain based on your copied DNS information. Set the time to live (TTL) to 3600 seconds (60 minutes), and then save the record.
+  - https://learn.microsoft.com/en-us/entra/fundamentals/add-custom-domain
+
+- **Create DNS records in a custom domain for a web app**
+  - You can configure Azure DNS to host a custom domain for your web apps. For example, you can create an Azure web app and have your users access it using either www.contoso.com or contoso.com as a fully qualified domain name (FQDN).
+  - https://learn.microsoft.com/en-us/azure/dns/dns-web-sites-custom-domain
+  - **To do this, create three records:**
+    - A root "A" record pointing to contoso.com
+    - A root "TXT" record for verification
+    - A "CNAME" record for the www name that points to the A record
+
+- **Lock your Azure resources to protect your infrastructure**
+  - https://learn.microsoft.com/en-gb/azure/azure-resource-manager/management/lock-resources?tabs=json
+  - As an administrator, you can lock an Azure subscription, resource group, or resource to protect them from accidental user deletions and modifications. The lock overrides any user permissions.
+  - **To create or delete management locks,** 
+    - you need access to `Microsoft.Authorization/*` or `Microsoft.Authorization/locks/*` actions. 
+    - Users assigned to the `Owner` and the `User Access Administrator` roles have the required access.
+
+
+- **What is a device identity?**
+  - A device identity is an object in Microsoft Entra ID. This device object is similar to users, groups, or applications. 
+  - https://learn.microsoft.com/en-us/entra/identity/devices/overview
