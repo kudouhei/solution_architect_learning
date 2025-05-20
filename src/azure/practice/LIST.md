@@ -232,3 +232,19 @@
 - **Set up disaster recovery to a secondary Azure region for an Azure VM**
   - Azure Site Recovery can orchestrate disaster recovery to a secondary region for your Azure VMs.The Azure Site Recovery service contributes to your business continuity and disaster recovery (BCDR) strategy by keeping your business applications online during planned and unplanned outages. Site Recovery manages and orchestrates disaster recovery of on-premises machines and Azure virtual machines (VM), including replication, failover, and recovery.
   - https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-quickstart
+
+- **Availability options for Azure Virtual Machines**
+  - Availability zones expands the level of control you have to maintain the availability of the applications and data on your VMs. An Availability Zone is a physically separate zone, within an Azure region. There are three Availability Zones per supported Azure region.
+  - Azure Site Recovery
+    - Azure VMs replicating between Azure regions.
+    - On-premises VMs, Azure Stack VMs, and physical servers.
+  - https://learn.microsoft.com/en-us/azure/virtual-machines/availability
+
+- **Configure Azure CNI networking in Azure Kubernetes Service (AKS)**
+  - Azure CNI is a networking plugin that provides network isolation and connectivity between pods and services in AKS.
+  - https://learn.microsoft.com/en-us/azure/aks/configure-azure-cni?tabs=configure-networking-portal
+
+- **Scale up an app in Azure App Service**
+  - Scale up: Get more CPU, memory, or disk space, or extra features like dedicated virtual machines (VMs), custom domains and certificates, staging slots, autoscaling, and more. You scale up by changing the pricing tier of the App Service plan that your app belongs to.
+  - Scale out: Increase the number of VM instances that run your app. Basic, Standard, and Premium service plans scale out to as many as 3, 10, and 30 instances, respectively. App Service Environments in the Isolated tier further increase your scale-out count to 100 instances.
+  - https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
