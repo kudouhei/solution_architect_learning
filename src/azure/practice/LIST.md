@@ -195,3 +195,40 @@
 - **What is a device identity?**
   - A device identity is an object in Microsoft Entra ID. This device object is similar to users, groups, or applications. 
   - https://learn.microsoft.com/en-us/entra/identity/devices/overview
+
+- **Back up Azure Files**
+  - Azure Files backup is a native cloud solution that protects your data and eliminates on-premises maintenance overheads. Azure Backup seamlessly integrates with Azure File Sync, centralizing your file share data and backups.
+  - https://learn.microsoft.com/en-us/azure/backup/backup-azure-files?tabs=recovery-services-vault
+  - Azure Backup supports configuring snapshot and vaulted backups for Azure Files in your storage accounts. You can:
+    - Define backup schedules and retention settings.
+    - Store backup data in the Recovery Service vault, retaining it for up to 10 years.
+
+- **Get started with AzCopy**
+  - AzCopy is a command-line utility that you can use to copy blobs or files to or from a storage account.
+  - Use cases for AzCopy
+    - Copying data from an on-premises source to an Azure storage account
+    - Copying data from an Azure storage account to an on-premises source
+    - Copying data from one storage account to another storage account
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10?tabs=dnf
+
+- **Recover files from Azure virtual machine backup**
+  - Azure Backup provides the capability to restore Azure virtual machines (VMs) and disks from Azure VM backups, also known as recovery points. 
+  - Restoring files and folders is available only for Azure VMs deployed using the Resource Manager model and protected to a Recovery Services vault.
+  - https://learn.microsoft.com/en-us/azure/backup/backup-azure-restore-files-from-vm
+
+- **Monitor virtual machines with Azure Monitor**
+  - VM insights is a feature in Azure Monitor that allows you to quickly get started monitoring your virtual machines.
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/vm/monitor-virtual-machine
+
+- **Action groups**
+  - When Azure Monitor data indicates that there might be a problem with your infrastructure or application, an alert is triggered. You can use an action group to send a notification such as a voice call, SMS, push, or email when the alert is triggered in addition to the alert itself.
+  - Action groups are a collection of notification preferences and actions.
+  - Each action is made up of:
+    - Type: The sent notification or performed action. Examples include sending a voice call, SMS, or email. You can also trigger various types of automated actions.
+    - Name: A unique identifier within the action group.
+    - Details: The corresponding details that vary by type.
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/action-groups
+
+- **Set up disaster recovery to a secondary Azure region for an Azure VM**
+  - Azure Site Recovery can orchestrate disaster recovery to a secondary region for your Azure VMs.The Azure Site Recovery service contributes to your business continuity and disaster recovery (BCDR) strategy by keeping your business applications online during planned and unplanned outages. Site Recovery manages and orchestrates disaster recovery of on-premises machines and Azure virtual machines (VM), including replication, failover, and recovery.
+  - https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-quickstart
