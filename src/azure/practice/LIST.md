@@ -248,3 +248,9 @@
   - Scale up: Get more CPU, memory, or disk space, or extra features like dedicated virtual machines (VMs), custom domains and certificates, staging slots, autoscaling, and more. You scale up by changing the pricing tier of the App Service plan that your app belongs to.
   - Scale out: Increase the number of VM instances that run your app. Basic, Standard, and Premium service plans scale out to as many as 3, 10, and 30 instances, respectively. App Service Environments in the Isolated tier further increase your scale-out count to 100 instances.
   - https://learn.microsoft.com/en-us/azure/app-service/manage-scale-up
+
+- **Start using Privileged Identity Management**
+  - Use Privileged Identity Management (PIM) to manage, control, and monitor access within your Microsoft Entra organization. 
+  - To use Privileged Identity Management, you must have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license.
+  - https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-getting-started
+
