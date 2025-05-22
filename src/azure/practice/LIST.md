@@ -254,3 +254,10 @@
   - To use Privileged Identity Management, you must have a Microsoft Entra ID P2 or Microsoft Entra ID Governance license.
   - https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-getting-started
 
+- **Overview of autoscale in Azure**
+  - Autoscale is a service that you can use to automatically add and remove resources according to the load on your application.
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-overview
+  - **Best practices for autoscale**
+    - Ensure the maximum and minimum values are different and have an adequate margin between them
+    - Always use a scale-out and scale-in rule combination that performs an increase and decrease
+
