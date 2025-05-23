@@ -260,4 +260,3 @@
   - **Best practices for autoscale**
     - Ensure the maximum and minimum values are different and have an adequate margin between them
     - Always use a scale-out and scale-in rule combination that performs an increase and decrease
-
