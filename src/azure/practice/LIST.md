@@ -261,4 +261,8 @@
     - Ensure the maximum and minimum values are different and have an adequate margin between them
     - Always use a scale-out and scale-in rule combination that performs an increase and decrease
 
-- 
+- **Deploy Azure File Sync**
+  - Use Azure File Sync to centralize your organization's file shares in Azure Files, while keeping the flexibility, performance, and compatibility of an on-premises file server. 
+  - Azure File Sync transforms Windows Server into a quick cache of your Azure file share. 
+  - You can use any protocol that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS.
+  - https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
