@@ -271,3 +271,8 @@
   - You can use private endpoints for your Azure Storage accounts to allow clients on a virtual network (VNet) to securely access data over a Private Link. The private endpoint uses a separate IP address from the VNet address space for each storage account service. 
   - Network traffic between the clients on the VNet and the storage account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure from the public internet.
   - https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints
+
+- **Transfer data to Azure Files with Azure Import/Export**
+  - Modify the dataset.csv file in the root folder where the tool is.
+  - Modify the driveset.csv file in the root folder where the tool is.
+  - https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal-preview
