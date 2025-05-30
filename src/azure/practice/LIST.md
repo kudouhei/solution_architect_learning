@@ -266,3 +266,8 @@
   - Azure File Sync transforms Windows Server into a quick cache of your Azure file share. 
   - You can use any protocol that's available on Windows Server to access your data locally, including SMB, NFS, and FTPS.
   - https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-deployment-guide?tabs=azure-portal%2Cproactive-portal
+
+- **Use private endpoints for Azure Storage**
+  - You can use private endpoints for your Azure Storage accounts to allow clients on a virtual network (VNet) to securely access data over a Private Link. The private endpoint uses a separate IP address from the VNet address space for each storage account service. 
+  - Network traffic between the clients on the VNet and the storage account traverses over the VNet and a private link on the Microsoft backbone network, eliminating exposure from the public internet.
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-private-endpoints
