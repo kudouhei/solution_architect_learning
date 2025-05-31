@@ -276,3 +276,15 @@
   - Modify the dataset.csv file in the root folder where the tool is.
   - Modify the driveset.csv file in the root folder where the tool is.
   - https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-data-to-files?tabs=azure-portal-preview
+
+- **Creating New Storage Containers**
+  - First, define the endpoint URL. In this example, the containers will be created in a storage account called storageaccount1207 creating two endpoint URLs:
+    - `https://storageaccount1207.blob.core.windows.net/container1`
+    - `https://storageaccount1207.blob.core.windows.net/container2`
+  - Now that you know the endpoint URLs, use the azcopy make command passing each endpoint URL as a parameter as shown below.
+  - https://learn.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-portal?tabs=azure-portal
+
+- **Copying Files to/from Azure Containers**
+  - Using OAuth Authentication
+  - When using AzCopy to copy files to blobs, you have a couple of options for authentication. Since it is presumed you’ve already authenticated to Azure Storage (since it was in the prerequisites), you can simply run azcopy copy specifying a local file path followed by a container endpoint URL
+
