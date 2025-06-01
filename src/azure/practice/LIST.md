@@ -292,3 +292,21 @@
   - Cloud tiering, an optional feature of Azure File Sync, decreases the amount of local storage required while keeping the performance of an on-premises file server.
   - When enabled, this feature stores only frequently accessed (hot) files on your local server. Infrequently accessed (cool) files are split into namespace (file and folder structure) and file content. The namespace is stored locally and the file content stored in an Azure file share in the cloud.
   - https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-cloud-tiering-overview
+
+- **What is Azure Import/Export service?**
+  - Azure Import/Export service is used to securely import large amounts of data to Azure Blob storage and Azure Files by shipping disk drives to an Azure datacenter. 
+  - Azure Import/Export use cases
+    - Data migration to the cloud: Move large amounts of data to Azure quickly and cost effectively.
+    - Content distribution: Quickly send data to your customer sites.
+    - Backup: Take backups of your on-premises data to store in Azure Storage.
+    - Data recovery: Recover large amount of data stored in storage and have it delivered to your on-premises location.
+  - https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-service
+
+- **Create and manage budgets**
+  - Cost and usage data is typically available within 8-24 hours and budgets are evaluated against these costs every 24 hours.
+  - If you have a new subscription, you can't immediately create a budget or use other Cost Management features. It might take up to 48 hours before you can use all Cost Management features.
+  - https://learn.microsoft.com/en-gb/azure/cost-management-billing/costs/tutorial-acm-create-budgets?tabs=psbudget
+
+- **Planning for an Azure File Sync deployment**
+  - Azure File Sync is a service that allows you to cache several Azure file shares on an on-premises Windows Server or cloud VM.
+  - https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-planning
