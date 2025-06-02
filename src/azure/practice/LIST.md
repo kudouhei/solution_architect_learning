@@ -310,3 +310,11 @@
 - **Planning for an Azure File Sync deployment**
   - Azure File Sync is a service that allows you to cache several Azure file shares on an on-premises Windows Server or cloud VM.
   - https://learn.microsoft.com/en-us/azure/storage/file-sync/file-sync-planning
+
+- **Configure Azure Backup reports**
+  - Azure Backup provides a reporting solution that uses Azure Monitor logs and Azure workbooks. 
+  - Create a Log Analytics workspace or use an existing one
+    - Set up one or more Log Analytics workspaces to store your Backup reporting data. 
+    - The location and subscription where this **Log Analytics workspace can be created is independent of the location and subscription where your vaults exist.**
+    - By default, the data in a Log Analytics workspace is retained for 30 days. 
+  - https://learn.microsoft.com/en-us/azure/backup/configure-reports?tabs=recovery-services-vaults
