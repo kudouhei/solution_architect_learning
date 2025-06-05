@@ -318,3 +318,14 @@
     - The location and subscription where this **Log Analytics workspace can be created is independent of the location and subscription where your vaults exist.**
     - By default, the data in a Log Analytics workspace is retained for 30 days. 
   - https://learn.microsoft.com/en-us/azure/backup/configure-reports?tabs=recovery-services-vaults
+
+- **Azure Import/Export system requirements**
+  - Supported storage types
+    ![Supported storage types](./images/support.png)
+  - https://learn.microsoft.com/en-us/azure/import-export/storage-import-export-requirements
+  
+
+- **Azure Monitor Agent overview**
+  - The Azure Monitor Agent collects monitoring data from the guest operating system of Azure and hybrid virtual machines (VMs). 
+  - It delivers the data to Azure Monitor for use by features, insights, and other services, such as Microsoft Sentinel and Microsoft Defender for Cloud. 
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-overview
