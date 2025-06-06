@@ -333,4 +333,15 @@
 - **Get started with Azure Automation State Configuration**
   - https://learn.microsoft.com/en-us/azure/automation/automation-dsc-getting-started
 
-- 
+- **Create an internal load balancer to load balance VMs using the Azure portal**
+  - During the creation of the load balancer, you configure:
+    - Frontend IP address
+    - Backend pool
+    - Inbound load-balancing rules
+  - https://learn.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-internal-portal
+
+- **Configure Microsoft Entra multifactor authentication settings**
+  - Report suspicious activity is integrated with Microsoft Entra ID Protection for risk-driven remediation, reporting, and least-privileged administration.
+  - MFA service settings
+    - Settings for app passwords, trusted IPs, verification options, and remembering multifactor authentication on trusted devices are available in the service settings. 
+
