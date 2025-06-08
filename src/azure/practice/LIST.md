@@ -345,4 +345,8 @@
   - MFA service settings
     - Settings for app passwords, trusted IPs, verification options, and remembering multifactor authentication on trusted devices are available in the service settings. 
 
-- 
+- **Administer DNS and create conditional forwarders in a Microsoft Entra Domain Services managed domain**
+  - https://learn.microsoft.com/en-us/entra/identity/domain-services/manage-dns
+  - Create conditional forwarders
+    - A conditional forwarder is a configuration option in a DNS server that lets you define a DNS domain, such as contoso.com, to forward queries to. 
+    - Instead of the local DNS server trying to resolve queries for records in that domain, DNS queries are forwarded to the configured DNS for that domain. This configuration makes sure that the correct DNS records are returned, as you don't create a local a DNS zone with duplicate records in the managed domain to reflect those resources.
