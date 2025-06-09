@@ -362,3 +362,9 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Create an access review of groups and applications in Microsoft Entra ID**
   - To reduce the risk associated with stale access assignments, administrators can use Microsoft Entra ID to create access reviews for group members or application access.
   - https://learn.microsoft.com/en-us/entra/id-governance/perform-access-review
+
+- **Assign policy definitions for tag compliance**
+  - Use Azure Policy to enforce tagging rules and conventions. 
+  - By creating a policy, you avoid the scenario of resources being deployed to your subscription that don't have the expected tags for your organization.
+  - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies
+  
