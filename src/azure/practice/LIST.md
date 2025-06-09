@@ -1,5 +1,8 @@
 # List 
 
+## Study guide
+https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-104
+
 - **IP flow verify**
    - A Network Watcher feature that checks if traffic is allowed or denied to/from a virtual machine based on current network security group rules. 
    - https://learn.microsoft.com/en-us/azure/network-watcher/ip-flow-verify-overview
@@ -350,3 +353,7 @@
   - Create conditional forwarders
     - A conditional forwarder is a configuration option in a DNS server that lets you define a DNS domain, such as contoso.com, to forward queries to. 
     - Instead of the local DNS server trying to resolve queries for records in that domain, DNS queries are forwarded to the configured DNS for that domain. This configuration makes sure that the correct DNS records are returned, as you don't create a local a DNS zone with duplicate records in the managed domain to reflect those resources.
+
+- **How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain**
+  - Synchronization from on-premises AD DS to Microsoft Entra ID and Domain Services
+  - https://learn.microsoft.com/en-us/entra/identity/domain-services/synchronizationhttps://learn.microsoft.com/en-us/entra/identity/domain-services/synchronization
