@@ -368,3 +368,4 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - By creating a policy, you avoid the scenario of resources being deployed to your subscription that don't have the expected tags for your organization.
   - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies
   
+-  
