@@ -357,3 +357,8 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **How objects and credentials are synchronized in a Microsoft Entra Domain Services managed domain**
   - Synchronization from on-premises AD DS to Microsoft Entra ID and Domain Services
   - https://learn.microsoft.com/en-us/entra/identity/domain-services/synchronizationhttps://learn.microsoft.com/en-us/entra/identity/domain-services/synchronization
+
+
+- **Create an access review of groups and applications in Microsoft Entra ID**
+  - To reduce the risk associated with stale access assignments, administrators can use Microsoft Entra ID to create access reviews for group members or application access.
+  - https://learn.microsoft.com/en-us/entra/id-governance/perform-access-review
