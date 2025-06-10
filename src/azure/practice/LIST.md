@@ -367,5 +367,26 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - Use Azure Policy to enforce tagging rules and conventions. 
   - By creating a policy, you avoid the scenario of resources being deployed to your subscription that don't have the expected tags for your organization.
   - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies
-  
--  
+
+- **IT Service Management integration**
+  - Azure Monitor provides a bidirectional connection between Azure and ITSM tools to help you resolve issues faster. You can create work items in your ITSM tool based on your Azure metric alerts, activity log alerts, and log search alerts.
+  - Azure Monitor supports connections with the following ITSM tools:
+    - ServiceNow ITSM or IT Operations Management (ITOM)
+    - BMC
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/itsmc-overview
+
+- **Grant limited access to Azure Storage resources using shared access signatures**
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview
+  - A shared access signature (SAS) provides secure delegated access to resources in your storage account. With a SAS, you have granular control over how a client can access your data. For example:
+    - What resources the client may access.
+    - What permissions they have to those resources.
+    - How long the SAS is valid.
+
+- **Azure Storage redundancy**
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy
+  - Redundancy in the primary region
+    - Locally redundant storage (LRS) replicates your data three times within a single physical location (datacenter) in the primary region. It does not replicate across availability zones.
+    - Zone-redundant storage (ZRS) copies your data synchronously across three Azure availability zones in the primary region. For applications requiring high availability, Microsoft recommends using ZRS in the primary region, and also replicating to a secondary region.
+  - Redundancy in a secondary region
+    - Geo-redundant storage (GRS) copies your data synchronously three times within one or more Azure availability zones in the primary region using LRS.
+    - Geo-zone-redundant storage (GZRS) copies your data synchronously across three Azure availability zones in the primary region using ZRS.
