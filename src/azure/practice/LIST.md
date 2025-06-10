@@ -390,3 +390,23 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - Redundancy in a secondary region
     - Geo-redundant storage (GRS) copies your data synchronously three times within one or more Azure availability zones in the primary region using LRS.
     - Geo-zone-redundant storage (GZRS) copies your data synchronously across three Azure availability zones in the primary region using ZRS.
+
+- **Authorize access to blobs and files with AzCopy and Microsoft Entra ID**
+  - https://learn.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-authorize-azure-active-directory
+  
+- **Send Azure Monitor Activity log data**
+  - The Azure Monitor Activity Log is a platform log that provides insight into subscription-level events.
+  - Create a diagnostic setting to send the Activity Log to one or more of these locations:
+    - Log Analytics workspace for more complex querying and alerting
+    - Azure Event Hubs to forwarding logs outside of Azure.
+    - Azure Storage for cheaper, long-term archiving.
+  - https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log?tabs=powershell
+
+- **Monitor a Linux virtual machine in Azure**
+  - Enable boot diagnostics on a VM
+  - View boot diagnostics
+  - View VM host metrics
+  - Enable Azure Monitor for VMs
+  - View VM performance metrics
+  - Create an alert
+  - https://learn.microsoft.com/en-us/previous-versions/azure/virtual-machines/linux/tutorial-monitor
