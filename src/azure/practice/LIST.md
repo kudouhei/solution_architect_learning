@@ -412,3 +412,21 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - View VM performance metrics
   - Create an alert
   - https://learn.microsoft.com/en-us/previous-versions/azure/virtual-machines/linux/tutorial-monitor
+
+- **Automatic Extension Upgrade for virtual machines and scale sets in Azure**
+  - https://learn.microsoft.com/en-us/azure/virtual-machines/automatic-extension-upgrade?tabs=RestAPI1%2CRestAPI2
+  - Automatic Extension Upgrade has the following features:
+    - Azure VMs and virtual machine scale sets are supported.
+    - Upgrades are applied in an availability-first deployment model.
+    - For a virtual machine scale set, no more than 20% of the scale set VM upgrades are in a single batch. The minimum batch size is one VM.
+    - All VM sizes and both Windows and Linux extensions are compatible.
+    - Automatic upgrades are optional at any time.
+    - Virtual machine scale sets of any size are enabled.
+    - Each supported extension is enrolled individually. You can choose which extensions to upgrade automatically.
+    - All public cloud regions are supported.
+
+- **Set up staging environments in Azure App Service**
+  - Deploying your application to a nonproduction slot has the following benefits:
+    - You can validate app changes before you swap the slot into production.
+  - https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots?tabs=portal
+
