@@ -117,7 +117,9 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal
 
 - **Network security groups**
-  - 
+  - Security rules
+    - 	A number between 100 and 4096. Rules are processed in priority order, with lower numbers processed before higher numbers, because lower numbers have higher priority. 
+    - Azure default security rules are given the highest number with the lowest priority to ensure that custom rules are always processed first.
   - https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview
 
 - **Azure Load Balancer SKUs**
