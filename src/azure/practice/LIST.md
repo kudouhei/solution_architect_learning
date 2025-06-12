@@ -430,3 +430,17 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
     - You can validate app changes before you swap the slot into production.
   - https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots?tabs=portal
 
+- **Monitor network communication between two virtual machines using the Azure portal**
+  - https://learn.microsoft.com/en-us/azure/network-watcher/monitor-vm-communication
+
+- **Connection monitor overview**
+  - Use cases
+    - Your front-end web server virtual machine (VM) communicates with a database server VM in a multi-tier application. You want to check network connectivity between the two VMs.
+    - You want to check the connectivity from single or multiple instances of an Azure Virtual Machine Scale Set to your Azure or non-Azure multi-tier application.
+    - You want VMs the East US region to ping VMs in the Central US region to measure and compare cross-region network latencies.
+  - https://learn.microsoft.com/en-us/azure/network-watcher/connection-monitor-overview
+
+- **Create and manage a VPN gateway using the Azure portal**
+  - A VPN gateway is used when creating a VPN connection to your on-premises network. Route-based VPN devices use any-to-any (wildcard) traffic selectors, and let routing/forwarding tables direct traffic to different IPsec tunnels.
+  - Policy-based VPN devices use the combinations of prefixes from both networks to define how traffic is encrypted/decrypted through IPsec tunnels. It is typically built on firewall devices that perform packet filtering.
+
