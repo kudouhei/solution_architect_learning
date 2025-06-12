@@ -37,6 +37,10 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **What is Azure Private DNS**
   - Azure Private DNS provides a reliable and secure DNS service for your virtual networks. Azure Private DNS manages and resolves domain names in the virtual network without the need to configure a custom DNS solution.
   - To resolve the records of a private DNS zone from your virtual network, you must link the virtual network with the zone. Linked virtual networks have full access and can resolve all DNS records published in the private zone.
+  - Capabilities
+    - Automatic registration of virtual machines from a virtual network that's linked to a private zone with autoregistration enabled.
+    - Forward DNS resolution is supported across virtual networks that are linked to the private zone. 
+    - Reverse DNS lookup is supported within the virtual-network scope. 
   - https://learn.microsoft.com/en-us/azure/dns/private-dns-overview
 
 - **Back up a virtual machine in Azure**
@@ -106,6 +110,15 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - You can peer virtual networks in the same region, or different regions. Peering virtual networks in different regions is also referred to as Global Virtual Network Peering.
   - You can't move a virtual network while it's part of a peering. To move a virtual network to a different resource group or subscription, first delete the peering, then move the virtual network, and finally recreate the peering.
   - The virtual networks you peer must have nonoverlapping IP address spaces.
+  - **Requirements and constraints**
+    - You can peer virtual networks in the same region, or different regions. Peering virtual networks in different regions is also referred to as Global Virtual Network Peering.
+    - You can't move a virtual network while it's part of a peering. To move a virtual network to a different resource group or subscription, first delete the peering, then move the virtual network, and finally recreate the peering.
+    - A peering is established between two virtual networks. Peerings by themselves aren't transitive. If you create peerings between:
+      - VirtualNetwork1 and VirtualNetwork2
+      - VirtualNetwork2 and VirtualNetwork3
+      There's no connectivity between VirtualNetwork1 and VirtualNetwork3 through VirtualNetwork2. If you want VirtualNetwork1 and VirtualNetwork3 to directly communicate, you have to create an explicit peering between VirtualNetwork1 and VirtualNetwork3, or go through an NVA in the Hub network. 
+  - **Update the address space for a peered virtual network using the Azure portal**
+    - https://learn.microsoft.com/en-us/azure/virtual-network/update-virtual-network-peering-address-space
   
 - **Create an Azure DNS zone and record using the Azure portal**
   - https://learn.microsoft.com/en-us/azure/dns/dns-getstarted-portal
@@ -443,4 +456,16 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Create and manage a VPN gateway using the Azure portal**
   - A VPN gateway is used when creating a VPN connection to your on-premises network. Route-based VPN devices use any-to-any (wildcard) traffic selectors, and let routing/forwarding tables direct traffic to different IPsec tunnels.
   - Policy-based VPN devices use the combinations of prefixes from both networks to define how traffic is encrypted/decrypted through IPsec tunnels. It is typically built on firewall devices that perform packet filtering.
+
+- **Create, change, or delete a route table**
+  - Azure automatically routes traffic between Azure subnets, virtual networks, and on-premises networks. If you want to change Azure's default routing, you do so by creating a route table.
+  - Create a route
+    - Enter the Address prefix, in Classless Inter-Domain Routing (CIDR) notation, that you want to route traffic to. 
+    - The prefix can't be duplicated in more than one route within the route table, though the prefix can be within another prefix.
+  - https://learn.microsoft.com/en-us/azure/virtual-network/manage-route-table#create-a-route-table
+
+- **Next hop overview**
+  - Next hop is a feature of Azure Network Watcher that gives you the Next hop type, IP address, and Route table ID of a specific destination IP address.
+  - An improper configuration of routes, where traffic is directed to an on-premises location or a **network virtual appliance** can lead to connectivity issues.
+  - https://learn.microsoft.com/en-us/azure/network-watcher/next-hop-overview
 
