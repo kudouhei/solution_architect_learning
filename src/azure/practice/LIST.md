@@ -469,3 +469,32 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - An improper configuration of routes, where traffic is directed to an on-premises location or a **network virtual appliance** can lead to connectivity issues.
   - https://learn.microsoft.com/en-us/azure/network-watcher/next-hop-overview
 
+- **Azure Load Balancer distribution modes**
+  - Hash based: Azure Load Balancer uses a five-tuple hash based distribution mode by default. The hash is used to route traffic to healthy backend instances within the backend pool. The algorithm provides stickiness only within a transport session.
+    - Source IP
+    - Source port
+    - Destination IP
+    - Destination port
+    - Protocol type
+  - Session persistence: Session persistence is also known session affinity, source IP affinity, or client IP affinity. This distribution mode uses a two-tuple (source IP and destination IP) or three-tuple (source IP, destination IP, and protocol type) hash to route to backend instances. When using session persistence, connections from the same client go to the same backend instance within the backend pool.
+    - Client IP (2-tuple) - Specifies that successive requests from the same client IP address are handled by the same backend instance.
+    - Client IP and protocol (3-tuple) - Specifies that successive requests from the same client IP address and protocol combination are handled by the same backend instance.
+  - https://learn.microsoft.com/en-us/azure/load-balancer/distribution-mode-concepts
+  - https://cloudopszone.com/configure-azure-load-balancer-for-sticky-sessions/
+
+- **Virtual network traffic routing**
+  - Default
+    - Each route contains an address prefix and next hop type. 
+  - You might need to enable IP forwarding within the virtual machine's operating system for the appliance to forward traffic between private IP addresses assigned to Azure network interfaces.
+  - https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-udr-overview
+
+- **Create a site-to-site VPN connection in the Azure portal**
+  - https://learn.microsoft.com/en-us/azure/vpn-gateway/tutorial-site-to-site-portal
+
+- **Enable diagnostic logging for apps in Azure App Service**
+  - Enable web server logging
+  - https://learn.microsoft.com/en-us/azure/app-service/troubleshoot-diagnostic-logs
+
+- **Set up disaster recovery for Azure VMs**
+  - When you enable replication for a VM to set up disaster recovery, the Site Recovery Mobility service extension installs on the VM, and registers it with Azure Site Recovery.
+  - https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
