@@ -498,3 +498,9 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Set up disaster recovery for Azure VMs**
   - When you enable replication for a VM to set up disaster recovery, the Site Recovery Mobility service extension installs on the VM, and registers it with Azure Site Recovery.
   - https://learn.microsoft.com/en-us/azure/site-recovery/azure-to-azure-tutorial-enable-replication
+
+
+- **Use tags to organize your Azure resources and management hierarchy**
+  - Tags are metadata elements that you apply to your Azure resources. They are key-value pairs that help you identify resources based on settings that are relevant to your organization.
+  - Resources don't inherit the tags you apply to a resource group or a subscription. 
+  - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
