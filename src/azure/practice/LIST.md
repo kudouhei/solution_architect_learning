@@ -504,3 +504,14 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - Tags are metadata elements that you apply to your Azure resources. They are key-value pairs that help you identify resources based on settings that are relevant to your organization.
   - Resources don't inherit the tags you apply to a resource group or a subscription. 
   - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources
+
+
+- **Azure Policy built-ins**
+  - https://learn.microsoft.com/en-us/azure/governance/policy/samples/
+
+- **What is Azure Virtual WAN**
+  - https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about
+
+- **Delete an Azure Backup Recovery Services vault**
+  - https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal
+
