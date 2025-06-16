@@ -515,3 +515,5 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Delete an Azure Backup Recovery Services vault**
   - https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal
 
+
+- 
