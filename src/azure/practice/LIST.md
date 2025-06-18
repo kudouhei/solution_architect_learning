@@ -516,4 +516,12 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - https://learn.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal
 
 
-- 
+- **Configure and enable risk policies**
+  - User risk policy
+    - Require a secure password change when user risk level is High. Microsoft Entra multifactor authentication is required before the user can create a new password with password writeback to remediate their risk.
+    - A secure password change using self-service password reset is the only way to self-remediate user risk, regardless of the risk level.
+  - Sign-in risk policy
+    - Require Microsoft Entra multifactor authentication when sign-in risk level is Medium or High, allowing users to prove it's them by using one of their registered authentication methods, remediating the sign-in risk.
+    - A successful multifactor authentication is the only way to self-remediate the sign-in risk, regardless of the risk level.
+  - https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies
+
