@@ -525,3 +525,5 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
     - A successful multifactor authentication is the only way to self-remediate the sign-in risk, regardless of the risk level.
   - https://learn.microsoft.com/en-us/entra/id-protection/howto-identity-protection-configure-risk-policies
 
+- **What are Azure App Service plans**
+  - https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans
