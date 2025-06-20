@@ -527,3 +527,8 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 
 - **What are Azure App Service plans**
   - https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans
+
+- **App Service overview**
+  - Azure App Service is a platform that lets you run web applications, mobile back ends, and RESTful APIs without worrying about managing the underlying infrastructure.
+  - App Service supports a variety of web stacks: .NET, Java (in Java SE, Tomcat, and JBoss flavors), Node.js, Python, and PHP, and can run them on both Windows and Linux
+  - https://learn.microsoft.com/en-us/azure/app-service/overview
