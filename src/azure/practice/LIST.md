@@ -532,3 +532,6 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - Azure App Service is a platform that lets you run web applications, mobile back ends, and RESTful APIs without worrying about managing the underlying infrastructure.
   - App Service supports a variety of web stacks: .NET, Java (in Java SE, Tomcat, and JBoss flavors), Node.js, Python, and PHP, and can run them on both Windows and Linux
   - https://learn.microsoft.com/en-us/azure/app-service/overview
+
+- **Connect virtual networks with virtual network peering**
+  - https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks?tabs=portal
