@@ -536,4 +536,7 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Connect virtual networks with virtual network peering**
   - https://learn.microsoft.com/en-us/azure/virtual-network/tutorial-connect-virtual-networks?tabs=portal
 
- 
+- **Orchestration modes for Virtual Machine Scale Sets in Azure**
+  - Scale set orchestration modes allow you to have greater control over how virtual machine instances are managed by the scale set.
+  - Flexible orchestration mode can be used with all VM sizes. Flexible orchestration mode provides the highest scale and configurability for VM sizes that support memory preserving updates 
+  - https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes
