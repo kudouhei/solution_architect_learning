@@ -540,3 +540,14 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - Scale set orchestration modes allow you to have greater control over how virtual machine instances are managed by the scale set.
   - Flexible orchestration mode can be used with all VM sizes. Flexible orchestration mode provides the highest scale and configurability for VM sizes that support memory preserving updates 
   - https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-orchestration-modes
+
+- **Design highly available gateway connectivity for cross-premises and VNet-to-VNet connections**
+  - https://learn.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-highlyavailable
+  - To provide better availability for your cross premises connections, there are a few options available:
+    - Multiple on-premises VPN devices
+    - Active-active Azure VPN gateway
+    - Combination of both
+  - Highly Available VNet-to-VNet
+    - The same active-active configuration can also apply to Azure VNet-to-VNet connections. You can create active-active VPN gateways for each virtual network, then connect them together to form the same full mesh connectivity of 4 tunnels between the two VNets.
+    
+
