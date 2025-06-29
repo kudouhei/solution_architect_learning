@@ -549,5 +549,12 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
     - Combination of both
   - Highly Available VNet-to-VNet
     - The same active-active configuration can also apply to Azure VNet-to-VNet connections. You can create active-active VPN gateways for each virtual network, then connect them together to form the same full mesh connectivity of 4 tunnels between the two VNets.
-    
+   
+- **Move an app to another App Service plan**
+  - You can move an app to another App Service plan, as long as the source plan and the target plan are in the same resource group and geographical region and of the same OS type. Any change in type, such as Windows to Linux or any type that's different from the originating type, isn't supported.
+  - https://learn.microsoft.com/en-us/azure/app-service/app-service-plan-manage
+
+- **Move an app to a different region**
+  - The region in which your app runs is the region of the App Service plan it's in. However, you can't change an App Service plan's region. If you want to run your app in a different region, one alternative is app cloning. Cloning makes a copy of your app in a new or existing App Service plan in any region.
+  - https://learn.microsoft.com/en-us/azure/app-service/app-service-plan-manage
 
