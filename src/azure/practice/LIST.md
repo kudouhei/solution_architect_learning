@@ -571,3 +571,6 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - CORS (cross-origin resource sharing) is an HTTP feature that enables a web application running under one domain to access resources in another domain. 
   - In order to reduce the possibility of cross-site scripting attacks, all modern web browsers implement a security restriction known as same-origin policy. This restriction prevents a web page from calling APIs in a different domain. CORS provides a secure way to allow one origin (the origin domain) to call APIs in another origin.
 
+- **Azure Migrate appliance**
+  - https://learn.microsoft.com/en-us/azure/migrate/migrate-appliance
+
