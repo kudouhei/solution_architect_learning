@@ -558,3 +558,16 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - The region in which your app runs is the region of the App Service plan it's in. However, you can't change an App Service plan's region. If you want to run your app in a different region, one alternative is app cloning. Cloning makes a copy of your app in a new or existing App Service plan in any region.
   - https://learn.microsoft.com/en-us/azure/app-service/app-service-plan-manage
 
+- **Reduce service costs by using Azure Advisor**
+  - https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations
+  - Azure Advisor helps you optimize and reduce your overall Azure spend by identifying idle and underutilized resources. 
+  - You can get cost recommendations from the Cost tab on the Advisor dashboard.
+
+- **Support matrix for disaster recovery of on-premises Hyper-V VMs to Azure**
+  - https://learn.microsoft.com/en-us/azure/site-recovery/hyper-v-azure-support-matrix#azure-vm-requirements
+
+- **Using Azure CDN with CORS**
+  - https://learn.microsoft.com/en-us/azure/cdn/cdn-cors
+  - CORS (cross-origin resource sharing) is an HTTP feature that enables a web application running under one domain to access resources in another domain. 
+  - In order to reduce the possibility of cross-site scripting attacks, all modern web browsers implement a security restriction known as same-origin policy. This restriction prevents a web page from calling APIs in a different domain. CORS provides a secure way to allow one origin (the origin domain) to call APIs in another origin.
+
