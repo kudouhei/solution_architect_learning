@@ -580,3 +580,6 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
     - You can check if your firewall or ISP is blocking port 445 by using the Test-NetConnection PowerShell cmdlet. For more information, see Port 445 is blocked.
   - https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows
 
+- **What is Azure Migrate**
+  - Azure Migrate is a service that helps you decide on, plan, and execute your migration to Azure. Azure Migrate helps you find the best migration path, assess for Azure readiness and cost of hosting workloads on Azure, and perform the migration with minimal downtime and risk
+  - https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview?view=migrate-classic
