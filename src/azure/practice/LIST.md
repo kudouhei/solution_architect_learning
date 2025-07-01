@@ -574,3 +574,9 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **Azure Migrate appliance**
   - https://learn.microsoft.com/en-us/azure/migrate/migrate-appliance
 
+- **Mount SMB Azure file share on Windows**
+  - prerequisites
+    - Ensure port 445 is open: The SMB protocol requires TCP port 445 to be open. Connections will fail if port 445 is blocked. 
+    - You can check if your firewall or ISP is blocking port 445 by using the Test-NetConnection PowerShell cmdlet. For more information, see Port 445 is blocked.
+  - https://learn.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows
+
