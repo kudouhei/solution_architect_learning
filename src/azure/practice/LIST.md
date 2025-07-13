@@ -595,3 +595,6 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
   - You also need to create a content delivery network profile, which is a collection of content delivery network endpoints.
   - https://learn.microsoft.com/en-us/azure/cdn/cdn-overview
 
+- **Service Bus queues, topics, and subscriptions**
+  - 
+  - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions
