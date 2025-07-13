@@ -583,3 +583,15 @@ https://learn.microsoft.com/en-us/credentials/certifications/resources/study-gui
 - **What is Azure Migrate**
   - Azure Migrate is a service that helps you decide on, plan, and execute your migration to Azure. Azure Migrate helps you find the best migration path, assess for Azure readiness and cost of hosting workloads on Azure, and perform the migration with minimal downtime and risk
   - https://learn.microsoft.com/en-us/azure/migrate/migrate-services-overview?view=migrate-classic
+
+- **URL Path Based Routing overview**
+  - URL Path Based Routing allows you to route traffic to backend server pools based on URL Paths of the request.
+  - One of the scenarios is to route requests for different content types to different backend server pools.
+  - https://learn.microsoft.com/en-us/azure/application-gateway/url-route-overview
+
+- **What is a content delivery network on Azure?**
+  - A content delivery network is a distributed network of servers that can efficiently deliver web content to users. A content delivery network store cached content on edge servers in point of presence (POP) locations that are close to end users, to minimize latency.
+  - To use Azure Content Delivery Network, you must own at least one Azure subscription.
+  - You also need to create a content delivery network profile, which is a collection of content delivery network endpoints.
+  - https://learn.microsoft.com/en-us/azure/cdn/cdn-overview
+
