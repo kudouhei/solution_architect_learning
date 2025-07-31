@@ -979,3 +979,12 @@
 - E. Restart the VMs.
 - **F. Verify NSG rules allow inbound traffic.** ✅
 ---
+## Question 108
+**Type:** Single Choice
+**Question:** You have three network security groups (NSGs) named NSG1, NSG2, and NSG3. Port 80 is blocked in NSG3 and allowed in NSG1 and NSG2. You have four Azure virtual machines that have the following configurations: VM1: - Subnet: Subnet1 - Network card: NIC1 - NIC1 is associated with NSG2. VM2: - Subnet: Subnet1 - Network card: NIC2 - NIC2 is associated with NSG3. VM3: - Subnet: Subnet3 - Network card: NIC3 - NIC3 is associated with NSG3. VM4: - Subnet: Subnet2 You have the following subnets: - Subnet1 is associated with NSG1. - Subnet2 is associated with NSG3. - Subnet 3 does not have an NSG associated. Which virtual machine can be accessed over the internet on port 80?
+**Choices:**
+- **A. VM1** ✅
+- B. VM2
+- C. VM3
+- D. VM4
+---

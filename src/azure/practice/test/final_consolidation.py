@@ -213,7 +213,7 @@ def process_markdown_files(file_paths: List[str], output_file: str = "final_cons
 def main():
     """Main function to run the script."""
     # Markdown files to process
-    markdown_files = ["01.md", "02.md", "03.md", "04.md", "05.md", "06.md", "07.md"]
+    markdown_files = ["final_consolidated_questions.md", "08.md"]
     
     # Check if files exist
     existing_files = [f for f in markdown_files if os.path.exists(f)]
