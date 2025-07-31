@@ -914,3 +914,68 @@
 - C. Create the SOA record for test.contoso.com.
 - D. Modify the A record for contoso.com.
 ---
+## Question 101
+**Type:** Single Choice
+**Question:** You have an Azure virtual machine. You receive a notification that the virtual machine is going to be affected by an underlying maintenance activity on the physical infrastructure. You need to move the virtual machine to a different host to avoid a service interruption. What should you do?
+**Choices:**
+- A. Apply an Azure policy.
+- B. Apply an Azure tag.
+- C. Move the virtual machine to another Azure subscription.
+- **D. Redeploy the virtual machine.** ✅
+---
+## Question 102
+**Type:** Single Choice
+**Question:** You have 100 virtual machines deployed to Azure. You have Azure Monitor alerts configured for CPU and memory utilization for the virtual machines. You open Azure Monitor alerts and discover 50 closed alerts for the virtual machines. What can cause the alert state to be Closed?
+**Choices:**
+- **A. An administrator manually changed the state of the alerts.** ✅
+- B. The alerts are older than 60 days.
+- C. The alert rule contains an action group that remediates the alert conditions.
+- D. The conditions that caused the alerts are no longer present.
+---
+## Question 103
+**Type:** Single Choice
+**Question:** You have an Azure subscription that contains virtual machines, virtual networks, application gateways, and load balancers. You need to monitor the network health of the resources. Which Azure service should you use?
+**Choices:**
+- A. Azure Monitor
+- **B. Azure Network Watcher** ✅
+- C. Azure Resource Manager
+- D. network security groups (NSGs)
+---
+## Question 104
+**Type:** Single Choice
+**Question:** You have an Azure subscription. From PowerShell, you run the `Get-MgUser` cmdlet for a user and receive the following details: - `Id: 8755b347-3545-3876-3987-999999999999` - `DisplayName: Ben Smith` - `Mail: bsmith@contoso.com` - `UserPrincipalName: bsmith_contoso.com#EXT#@fabrikam.com` Which statement accurately describes the user?
+**Choices:**
+- A. The user account is disabled.
+- **B. The user is a guest in the tenant.** ✅
+- C. The user is assigned an administrative role.
+- D. The user is deleted.
+---
+## Question 105
+**Type:** Single Choice
+**Question:** You are responsible for managing user identities and governance within your Azure environment. You need to ensure that a new employee can create and manage user accounts and groups, manage support tickets, and monitor service health. You need to use the principle of least privilege. Which Microsoft Entra role should you assign to the new employee?
+**Choices:**
+- **A. User Administrator** ✅
+- B. Billing Administrator
+- C. Global Administrator
+- D. Service Administrator
+---
+## Question 106
+**Type:** Multiple Choice
+**Question:** You plan to deploy an Azure virtual machine. You are evaluating whether to use an Azure Spot instance. Which two factors can cause an Azure Spot instance to be evicted? Each correct answer presents a complete solution.
+**Choices:**
+- A. the average CPU usages of the instance
+- **B. the Azure capacity needs** ✅
+- **C. the current price of the instance** ✅
+- D. the time of day
+---
+## Question 107
+**Type:** Multiple Choice
+**Question:** An organization uses a Microsoft Azure Standard Load Balancer to distribute traffic across multiple virtual machines (VMs) in a backend pool. Users report intermittent connectivity issues with applications on these VMs. You need to troubleshoot and resolve connectivity issues. Each correct answer presents part of the solution. Which three actions should you perform?
+**Choices:**
+- **A. Check the health probe configuration.** ✅
+- **B. Ensure VMs respond to the configured port.** ✅
+- C. Increase the timeout setting.
+- D. Modify the session persistence setting.
+- E. Restart the VMs.
+- **F. Verify NSG rules allow inbound traffic.** ✅
+---
