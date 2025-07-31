@@ -820,3 +820,97 @@
 - **C. Publish** ✅
 - D. Runtime stack
 ---
+## Question 91
+**Type:** Multiple Choice
+**Question:** You have an Azure subscription that contains a resource group named RG1. RG1 contains an Azure virtual machine named VM1. You need to use VM1 as a template to create a new Azure virtual machine. Which three methods can you use to complete the task? Each correct answer presents a complete solution.
+**Choices:**
+- A. From Azure Cloud Shell, run the `Get-AzVM` and `New-AzVM` cmdlets.
+- B. From Azure Cloud Shell, run the `Save-AzDeploymentScriptLog` and `New-AzResourceGroupDeployment` cmdlets.
+- **C. From Azure Cloud Shell, run the `Save-AzDeploymentTemplate` and `New-AzResourceGroupDeployment` cmdlets.** ✅
+- **D. From RG1, select Export template, select Download, and then, from Azure Cloud Shell, run the `New-AzResourceGroupDeployment` cmdlet.** ✅
+- **E. From VM1, select Export template, and then select Deploy.** ✅
+---
+## Question 92
+**Type:** Multiple Choice
+**Question:** You have an Azure subscription that contains an Azure App Service web app named App1. You have the following diagnostic logging configurations: - Application Logging (FileSystem): Error - Application Logging (Blob): Information - Detailed Error Message: Warning - Web Server Logging: Verbose You need to configure diagnostic logging to store all warnings or higher. Which types of diagnostic logging and severity should you enable?
+**Choices:**
+- **A. Application Logging (Blob)** ✅
+- B. Application Logging (FileSystem)
+- C. Detailed Error Message
+- D. Verbose
+- **E. Warning** ✅
+---
+## Question 93
+**Type:** Single Choice
+**Question:** You have a Log Analytics workspace that collects data from various data sources. You create a new Azure Monitor log query. You plan to view data pinned as a chart to a shared dashboard. What is the maximum number of days for which data can be shown on the shared dashboard?
+**Choices:**
+- A. 14
+- **B. 30** ✅
+- C. 90
+- D. 180
+---
+## Question 94
+**Type:** Single Choice
+**Question:** You have an Azure virtual machine that hosts a third-party application named App1. Users report that they experience performance issues when they use the application. You need to find the root cause of the performance issue. What should you use?
+**Choices:**
+- A. activity logs
+- B. Azure Advisor
+- C. Azure Cost
+- **D. Azure Monitor** ✅
+---
+## Question 95
+**Type:** Multiple Choice
+**Question:** You have an Azure subscription that contains a resource group named RG1. RG1 contains a virtual machine that runs daily reports. You need to ensure that the virtual machine shuts down when resource group costs exceed 75 percent of the allocated budget. Which two actions should you perform? Each correct answer presents part of the solution.
+**Choices:**
+- A. Create an action group of type Runbook, and then select Scale Up VM.
+- **B. Create an action group of type Runbook, and then select Stop VM as an action.** ✅
+- C. From Cost Management + Billing, create a new cost analysis.
+- **D. From Cost Management + Billing, modify the Budgets settings.** ✅
+---
+## Question 96
+**Type:** Multiple Choice
+**Question:** Contoso, Ltd. has multiple Azure subscriptions and resources that need to be efficiently managed. You need to manage access, policies, and compliance across all subscriptions in a unified manner. What three tasks should you perform? Each correct answer presents part of the solution.
+**Choices:**
+- A. Apply policies at the individual resource level.
+- B. Create individual resource groups for each subscription.
+- **C. Create a management group and assign all subscriptions to it.** ✅
+- **D. Apply necessary policies at the management group level.** ✅
+- **E. Configure role-based access control at the management group level.** ✅
+- F. Configure role-based access control at the individual resource level.
+---
+## Question 97
+**Type:** Single Choice
+**Question:** You have an Azure subscription that contains a storage account named storage1. You need to provide a partner organization with access to storage1. Access to storage1 must expire after 24 hours. What should you configure?
+**Choices:**
+- **A. a shared access signature (SAS)** ✅
+- B. an access key
+- C. Azure Content Delivery Network (CDN)
+- D. lifecycle management
+---
+## Question 98
+**Type:** Single Choice
+**Question:** You have a virtual machine named VM1 that is assigned to a network security group (NSG) named NSG1. NSG1 has the following outbound security rules: Rule1: - Priority: 900 - Name: BlockInternet - Port: 80 - Protocol: TCP - Source: Any - Destination: Any - Action: Block Rule2: - Priority: 1000 - Name: AllowInternet - Port: 80 - Protocol: TCP - Source: Any - Destination: Any - Action: Allow You need to ensure that internet access to VM1 on port 80 is allowed. What should you do?
+**Choices:**
+- A. Change the action of Rule2.
+- B. Change the name of Rule1.
+- **C. Change the priority of Rule2.** ✅
+- D. Change the source in Rule2.
+---
+## Question 99
+**Type:** Single Choice
+**Question:** You have an Azure subscription. You plan to implement four Azure virtual networks that will be peered. All virtual machines will use a DNS suffix of contoso.com. You need to configure name resolution for the virtual networks to ensure that all the virtual machines can communicate by using their FQDNs. The solution must minimize administrative effort. What should you use?
+**Choices:**
+- A. a DNS server on an Azure virtual machine
+- **B. an Azure Private DNS zone** ✅
+- C. an Azure public DNS zone
+- D. Azure-provided name resolution
+---
+## Question 100
+**Type:** Single Choice
+**Question:** You have an Azure subscription that contains an Azure DNS zone named contoso.com. You add a new subdomain named test.contoso.com. You plan to delegate test.contoso.com to a different DNS server. How should you configure the domain delegation?
+**Choices:**
+- A. Add an A record for test.contoso.com.
+- **B. Add an NS record set named test to the contoso.com zone.** ✅
+- C. Create the SOA record for test.contoso.com.
+- D. Modify the A record for contoso.com.
+---
