@@ -205,7 +205,7 @@ def convert_json_to_markdown(json_file: str, output_file: str = None) -> None:
 def main():
     """Main function to run the script."""
     # Default input file
-    input_file = "08.json"
+    input_file = "09.json"
     
     # Check if input file exists
     if not os.path.exists(input_file):
